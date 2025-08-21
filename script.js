@@ -14,4 +14,25 @@ function add() {
     li.appendChild(span);
   }
   input.value = "";
+  saveData();
 }
+
+list.addEventListener(
+  "click",
+  (e) => {
+    if (e.target.tagName === "SPAN") {
+      e.target.parentElement.remove();
+      saveData();
+    }
+  },
+  false
+);
+
+function saveData() {
+  localStorage.setItem("data", list.innerHTML);
+}
+
+function listData() {
+  list.innerHTML = localStorage.getItem("data");
+}
+listData();
