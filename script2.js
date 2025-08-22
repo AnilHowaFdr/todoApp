@@ -8,17 +8,26 @@ function add() {
   } else {
     // creating li
     let li = document.createElement("li");
-    li.innerHTML = input.value;
+    let p = document.createElement("p");
+    p.innerHTML = input.value;
+    li.appendChild(p);
     listContainer.appendChild(li);
 
     // creating edit
-    const editBtn = document.createElement("button");
+    let editBtn = document.createElement("button");
     editBtn.innerText = "Edit";
+    editBtn.classList.add("green");
     li.appendChild(editBtn);
 
     // creating delete
     const deleteBtn = document.createElement("button");
     deleteBtn.innerText = "Delete";
+    deleteBtn.classList.add("red");
     li.appendChild(deleteBtn);
+    input.value = "";
   }
 }
+
+// editBtn.addEventListener("click",(e)=>{
+// if
+// })

@@ -52,11 +52,32 @@
 }
 
 .listContainer {
-  padding: 0 0 0 30px;
-  display: flex;
-  justify-content: space-between;
+  padding: 0 0 0 20px;
 }
 
 ul li {
-  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3px;
+}
+ul li p {
+  flex: 1;
+  font-size: 18px;
+}
+
+button {
+  padding: 5px 15px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.green {
+  background-color: green;
+  color: white;
+}
+.red {
+  background-color: red;
+  color: white;
 }
