@@ -3,20 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
     <title>Document</title>
   </head>
   <body>
-    <div id="toDo">
-      <h2>To-Do List</h2>
+    <div id="toDoApp">
+      <h2>To Do App</h2>
       <div class="search">
-        <input type="text" id="inputBox" placeholder="Add your work" />
-        <button id="inputBtn" onclick="addItem()">+</button>
+        <input type="text" class="input" placeholder="Enter Your Name" />
+        <button onclick="add()" class="addBtn">
+          <img src="/add.png" alt="add" />
+        </button>
       </div>
-      <ul class="listToDo">
-        <!-- <li>Hello</li>
-        <li>Hello</li> -->
-      </ul>
+      <ul class="listContainer"></ul>
     </div>
     <script src="script2.js"></script>
   </body>

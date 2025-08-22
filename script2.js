@@ -1,21 +1,24 @@
-const listToDo = document.querySelector(".listToDo");
-const inputBox = document.querySelector("#inputBox");
-const inputBtn = document.querySelector("#inputBtn");
+const input = document.querySelector(".input");
+const addBtn = document.querySelector(".addBtn");
+const listContainer = document.querySelector(".listContainer");
 
-function addItem() {
-  if (inputBox.value === "") {
-    alert("Write somthing");
+function add() {
+  if (input.value === "") {
+    alert("Write something");
   } else {
+    // creating li
     let li = document.createElement("li");
-    li.innerHTML = inputBox.value;
-    listToDo.appendChild(li);
-    let span = document.createElement("span");
-    span.innerHTML = "X";
-    listToDo.appendChild(span);
-  }
-  inputBox.value = "";
-}
+    li.innerHTML = input.value;
+    listContainer.appendChild(li);
 
-// listToDo.addEventListener("click",(e)=>{
-//     if(e.target.)
-// })
+    // creating edit
+    const editBtn = document.createElement("button");
+    editBtn.innerText = "Edit";
+    li.appendChild(editBtn);
+
+    // creating delete
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "Delete";
+    li.appendChild(deleteBtn);
+  }
+}
